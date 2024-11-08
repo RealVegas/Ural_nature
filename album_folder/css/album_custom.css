@@ -1,0 +1,54 @@
+﻿/* Стилевое оформление специфичное для альбома */
+
+/* Фоновое изображение + запрет на выделение текста */
+
+body {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 30px;
+	color: #000;
+	background: url(../img/wallpaper.png);
+
+	background-repeat: repeat;
+
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Надпись вверху */
+
+h1 {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 27px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #F0F0F0;
+}
+
+/* Надпись внизу - не изменяет текст */
+
+pre {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 17px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #F0F0F0;
+}
+
+/* Надписи для параметров слайдшоу */
+
+h2 {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 17px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: #F0F0F0;
+	
+}

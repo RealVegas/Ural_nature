@@ -1,0 +1,178 @@
+﻿/* Общее для всех альбомов стилевое оформление */
+
+/*---------------------------------------------------------------*/
+/* Стилевое области просмотра миниатюр                           */
+/*---------------------------------------------------------------*/
+
+/*Оформление фона для области просмотра миниатюр */
+
+.scrollback {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 200px;
+	background: transparent url(../img/black_hatch.png) repeat top left;
+	border-right: 1px solid #F0F0F0;
+	box-shadow: inset 0px 0px 15px 5px #000;
+}
+
+/*Полоса прокрутки миниатюр (для перемещения и регистрации нажатий на миниатюры)*/
+
+.scrollbar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	transition: top 1000ms ease-out;
+}
+
+/*Параметры миниатюры */
+
+.thumbnail {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 120px;
+	opacity: 0.6;
+	transition: opacity 1250ms;
+}
+
+.thumbnail:hover {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 120px;
+	opacity: 1;
+}
+
+/*---------------------------------------------------------------*/
+/* Стилевое оформление области с большой фотографией             */
+/*---------------------------------------------------------------*/
+
+/*Плашка для верхней надписи*/
+
+.uppertab {
+	position: fixed;
+	left: 250px;
+	background: transparent url(../img/black_hatch.png) repeat top left;
+	width: 600px;
+	height: 50px;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 15px 5px #000;
+	transition: top 1000ms, opacity 1000ms;
+}
+
+/*Плашка для нижней надписи*/
+
+.lowertab {
+	position: fixed;
+	background: transparent url(../img/black_hatch.png) repeat top left;
+	width: auto;
+	height: 50px;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 15px 5px #000;
+	transition: left 1000ms, opacity 1000ms;
+}
+
+/*Большое фото*/
+
+.photo {
+	position: fixed;
+	left: 250px;
+	top: 110px;
+	border-radius: 10px;
+	opacity: 1;
+}
+
+/*---------------------------------------------------------------*/
+/* Стилевое оформление информационного сообщения для печати фото */
+/*---------------------------------------------------------------*/
+
+/*Стрелка показывающая для фото */
+
+.infoarrow {
+	position: absolute;
+	height: 150px;
+	width: 177px;
+	z-index: 3;
+	visibility: hidden;
+}
+
+/*Плашка для вывода информации */
+
+.infotab {
+	position: absolute;
+	background: transparent url(../img/blue_hatch.png) repeat top left;
+	width: auto;
+	height: 50px;
+	border-radius: 20px;
+	border: 5px solid #F0F0F0;
+	z-index: 3;
+	visibility: hidden;
+}
+
+/*---------------------------------------------------------------*/
+/* Стилевое оформление меню с параметрами слайд-шоу              */
+/*---------------------------------------------------------------*/
+
+/* Кнопка «Параметры слайд-шоу»*/
+
+.slideheader {
+	position: absolute;
+	text-align: center;
+	top: 110px;
+	right: 30px;
+	height: 50px;
+	width: 300px;
+	background: transparent url(../img/black_hatch.png) repeat top left;
+	border-bottom: 1px solid #F0F0F0; /*добавляет 1px по вертикали*/
+	border-radius: 10px 10px 0px 0px;
+}
+
+.slideheader:hover {
+	position: absolute;
+	text-align: center;
+	top: 110px;
+	right: 30px;
+	height: 50px;
+	width: 300px;
+	background: transparent url(../img/blue_hatch.png) repeat top left;
+	border-bottom: 1px solid #F0F0F0; /*добавляет 1px по вертикали*/
+	border-radius: 10px 10px 0px 0px;
+}
+
+/*Кнопки с опциями слайдшоу */
+
+.slideoptions {
+	position: absolute;
+	text-align: center;
+	right: 30px;
+	width: 300px;
+	height: auto;
+	background: #000;
+	opacity: 0;
+	border-bottom: 1px solid #F0F0F0;	
+}
+
+/*Кнопка «Запустить слайд-шоу»*/
+
+.slidebutton {
+	position: absolute;
+	text-align: center;
+	right: 30px;
+	width: 300px;
+	height: 51px;
+	background: transparent url(../img/blue_hatch.png) repeat top left;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.slidebutton:hover {
+	position: absolute;
+	text-align: center;
+	right: 30px;
+	width: 300px;
+	height: 51px;
+	background: transparent url(../img/cyan_hatch.png) repeat top left;
+	border-radius: 0px 0px 10px 10px;
+}

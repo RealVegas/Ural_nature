@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Фотоальбом :: Урал</title>
+<meta http-equiv = "Content-Type" content="text/html; charset=UTF-8"/>
+<meta name = "description" content="Photo album on clean Javascript" />
+<meta name = "keywords" content="browser gallery, browser album, browser photo, photo album, photo gallery, photos"/>
+<meta itemprop = "image" content="album_folder/img/album.ico">
+<link rel = "icon" href="album_folder/img/album.ico"/>
+<link rel = "shortcut icon" href="album_folder/img/album.ico"/>
+<link rel = "stylesheet" href="album_folder/css/album_custom.css" type="text/css" media="screen"/>
+<link rel = "stylesheet" href="album_folder/css/album_generic.css" type="text/css" media="screen"/>
+<script type = "text/javascript" src="album_folder/jsc/album_photo.js"></script>
+<script type = "text/javascript" src="album_folder/jsc/album_scripts.js"></script>
+</head>
+
+<body id = "wallcont" onload = "preload_images(); set_tabs(); photo_size(); decor_style()">
+
+<!--Панель миниатюр-->
+
+<div class = "scrollback" id = "scroll_back">
+	<div class = "scrollbar" id = "scroll_bar" onclick="thumb_click()">
+		<script type = "text/javascript">create_thumbs(amount_photo); load_thumbs(1, loaded_thumb);</script>
+	</div>
+</div>
+
+<!--Стрелка и плашка с инофрмацией для печати-->
+
+<img src = "#" class = "infoarrow" id = "path_arrow"/>
+<div class = "infotab" id = "path_tab"><pre id = "path_text"></pre></div>
+
+<!--Верхняя и нижняя плашки и большое фото-->
+
+<div class = "uppertab" id = "upper_tab0"><h1 id = "upper_text0"></h1></div>
+<div class = "uppertab" id = "upper_tab1"><h1 id = "upper_text1"></h1></div>
+
+<div class = "lowertab" id = "lower_tab0"><pre id = "lower_text0"></pre></div>
+<div class = "lowertab" id = "lower_tab1"><pre id = "lower_text1"></pre></div>
+
+<img src = "#" alt = "Фото - 0" class = "photo" style = "z-index: 2;" id = "photo0" onmousedown = "show_info()" onmouseup = "hide_info()" onmouseout = "hide_info()"/>
+<img src = "#" alt = "Фото - 1" class = "photo" style = "z-index: 1;" id = "photo1" onmousedown = "show_info()" onmouseup = "hide_info()" onmouseout = "hide_info()"/>
+
+<!--Меню параметров слайд-шоу-->
+
+<!--Кнопка открытия параметров слайд-шоу-->
+
+<div class="slideheader" id="sl_header" onclick="rollover('sl_button')" onmousedown="sl_style('header_text', 'press')" onmouseup="sl_style('header_text', 'release')" onmouseout="sl_style('header_text', 'release')">
+	<h2 id = "header_text">Параметры слайд-шоу</h2>
+</div>
+
+<!--Кнопки настройки опций слайд-шоу-->
+
+<div class = "slideoptions" style = "top: 161px;" id = "option_0" onclick = "time_change('time_text')" onmousedown = "sim_button('option_0', 'time_text')" onmouseup = "sim_button('option_0', 'time_text')">
+	<h2 id = "time_text">Время показа 5 сек.</h2>
+</div>
+
+<div class = "slideoptions" style = "top: 212px;" id = "option_1" onclick = "tog_button('option_1', 'next_text')">
+	<h2 id = "next_text">Следующий слайд по нажатию клавиши</h2>
+</div>
+
+<div class = "slideoptions" style = "top: 283px;" id = "option_2" onclick = "tog_button('option_2', 'loop_text')">
+	<h2 id = "loop_text">Циклический показ</h2>
+</div>
+
+<!--Кнопка запуска слайд-шоу-->
+
+<div class = "slidebutton" style = "top: 161px;" id = "sl_button" onmousedown = "sl_style('button_text', 'press')" onmouseup = "sl_style('button_text', 'release')"  onmouseout = "sl_style('button_text', 'release')">
+	<h2 id = "button_text">Запустить слайд-шоу</h2>
+</div>
+
+</body>
+</html>
